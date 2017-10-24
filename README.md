@@ -1,7 +1,6 @@
 public class MyTest {
 
     private WebDriver driver;
-    private WebDriver wait;
 
     /*
      * Navigate to "gmail.com"
@@ -15,12 +14,13 @@ public class MyTest {
 
     @Test
     public void MyFirst() {
-    driver = new ChromeDriver();
-    driver.get("https://www.google.com/");
-    driver.manage().window().maximize();
-    driver.findElement(By.id("lst-ib")).sendKeys("selenium");
-    driver.findElement(By.xpath("//input[@name='btnK']"));
-    driver.navigate().back();
-    driver.quit();
+        driver = new ChromeDriver();
+        driver.get("https://www.google.com/");
+        driver.manage().window().maximize();
+        driver.findElement(By.id("lst-ib")).sendKeys("selenium");
+        driver.findElement(By.xpath("//input[@name='btnK']"));
+        driver.navigate().back();
+        driver.navigate().refresh();
+        driver.quit();
     }
 }
